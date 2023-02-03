@@ -1,7 +1,5 @@
 import express from 'express';
 import { addHotel, deleteHotel, getHotel, getHotels, updateHotel } from '../controllers/hotels.js';
-import Hotel from '../models/Hotel.js';
-import { createError } from '../utils/error.js';
 
  const router = express.Router();
 
