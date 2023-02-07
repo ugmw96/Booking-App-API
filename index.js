@@ -5,6 +5,7 @@ import authRoutes from './routes/auth.js';
 import usersRoutes from './routes/users.js';
 import roomsRoutes from './routes/rooms.js';
 import hotelsRoutes from './routes/hotels.js';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 const app = express();
 
@@ -28,6 +29,7 @@ mongoose.connection.on("connected", () => {
 
 //Middlewares
 app.use(express.json());
+app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/hotels', hotelsRoutes);
